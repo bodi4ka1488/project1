@@ -12,6 +12,7 @@ const Head = styled.header`
   align-items: center;
   justify-content: space-between;
   position:fixed;
+  z-index:1;
   `
   const Logo = styled.div`
   font-weight: 600;

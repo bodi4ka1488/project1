@@ -6,6 +6,8 @@ import Servise from './components/Servise/Servise';
 import Info from './components/Info/Info';
 import About from './components/About/About';
 import Revievs from './components/Revievs/Revievs';
+import Clientu from './components/Clientu/Clientu';
+import Contact from './components/Contact/Contact';
 
 function App() {
   return (
@@ -16,7 +18,10 @@ function App() {
     <Info/>
     <About/>
     <Revievs/>
+    <Clientu/>
+    <Contact/>
     <Footer/>
+
     </>
   );
 }
