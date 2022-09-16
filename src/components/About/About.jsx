@@ -1,42 +1,46 @@
 import React from 'react';
 import styled from 'styled-components';
-import Circle from './Circle/Circle';
-import AboutItem from './AboutItem/AboutItem';
-const Wrapper =  styled.div`
+const Wrapper = styled.div`
     width:100%;
-    height:400px;
-    background-color:#23234d;
-`
-const Title = styled.div`
-padding-top:50px;
-height:100px;
-font-size:40px;
-font-weight:600;
-color:white;
-text-align:center;
+    height: max-content;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-around;
 `
 const Content = styled.div`
-    width:80%
-    height:300px;
-    display:flex;
-    flex-direction:row;
-    justify-content: center;
-    align-items: center;
-    gap:70px
+    width:350px;    
+    flex-direction: column;
+    display: flex;
+    gap:20px
+
+`
+const Info = styled.div`
+    color: blue;
+    margin: 70px 0 0 0;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 14px;
+`
+const Title = styled.div`
+    font-weight: 600;
+    font-size: 36px;
+    margin: 0 auto;
+`
+const Text = styled.div`
+font-size:18px;
+line-height:28px;
 `
 const About = () => {
     return (
         <Wrapper>
-            <Title>Ми добре розуміємося на числах</Title>
             <Content>
-                <AboutItem number="15" text="Років досвіду"/>
-                <Circle/>
-                <AboutItem number="36" text="Фахівців"/>
-                <Circle/>
-                <AboutItem number="120" text="Клієнтів щороку"/>
-                <Circle/>
-                <AboutItem number="9" text="Партнерів"/>
+                <Info>Про нас </Info>
+                <Title>Наші експерти - найкращі</Title>
+                <Text>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo soluta dolor exercitationem. Veniam id itaque consequatur asperiores amet repellendus! Exercitationem, aperiam facere deserunt quaerat harum natus at sit expedita provident.</Text>
+                <Text>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo soluta dolor exercitationem. Veniam id itaque consequatur asperiores amet repellendus! Exercitationem, aperiam facere deserunt quaerat harum natus at sit expedita provident.</Text>
             </Content>
+            <img src="https://cdn-icons-png.flaticon.com/512/4221/4221628.png" alt="Grafick" />
+            
         </Wrapper>
     );
 };
