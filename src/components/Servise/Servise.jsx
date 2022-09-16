@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import ServiseItem from './ServiseItem/ServiseItem';
 const Wrapper = styled.div`
     width:100%;
-    height:400px;
+    height:500px;
     display: grid;
     grid-template-areas: 
     "h1 h1 h1"
