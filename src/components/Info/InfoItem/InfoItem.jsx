@@ -15,7 +15,7 @@ const Number = styled.div`
 `
 
 
-const AboutItem = (props) => {
+const InfoItem = (props) => {
     return (
         <Wrapper>
             <Number>{props.number}</Number>
@@ -24,4 +24,4 @@ const AboutItem = (props) => {
     );
 };
 
-export default AboutItem;
+export default InfoItem;
