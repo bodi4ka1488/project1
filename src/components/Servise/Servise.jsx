@@ -1,51 +1,14 @@
+/* eslint-disable react/jsx-no-undef */
 import React from 'react';
-import styled from 'styled-components';
-import ServiseItem from './ServiseItem/ServiseItem';
-const Wrapper = styled.div`
-    width:100%;
-    height:500px;
-    display: grid;
-    grid-template-areas: 
-    "h1 h1 h1"
-    "h2 h2 h2"
-    "c c c"
-    ;
-    grid-template-rows: 100px 100px 1fr ;
-    grid-template-columns: 1fr 1fr 1fr;
-`
-const Title = styled.div`
-    grid-area: h1;
-    text-align: center;
-    color: blue;
-    margin: 70px 0 0 0;
-    text-transform: uppercase;
-    font-weight: 600;
-    font-size: 14px;
-
-`
-const UnderTitle = styled.div`
-    grid-area: h2;
-    font-weight: 600;
-    text-align: center;
-    font-size: 36px;
-    width:350px;
-    margin: 0 auto;
-
-`
-const ItemConteiner = styled.div`
-    grid-area: c;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    
-`
+import {ServiseItem} from './ServiseItem/ServiseItem'
+import { ItemConteiner, Title, UnderTitle, Wrapper } from './Styles';
 
 
 
-const Servise = () => {
+
+export const Servise = () => {
     return (
-        <Wrapper>
+        <Wrapper id='servise'>
             <Title>Послуги</Title>
             <UnderTitle>Виводимо ваш бізнес на новий рівень</UnderTitle>  
             <ItemConteiner>
@@ -56,5 +19,3 @@ const Servise = () => {
         </Wrapper>
     );
 };
-
-export default Servise;

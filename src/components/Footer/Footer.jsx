@@ -5,12 +5,10 @@ const Wrapper = styled.div`
     text-align:center;
     padding-top:30px
 `
-const Footer = () => {
+export const Footer = () => {
     return (
         <Wrapper>
-            © 2023 БізБуд. Створено за допомогою<a href="https://manage.wix.com/dashboard/1cc33f76-073e-4822-8c61-b899aaa3109c/home">Wix.com</a>  
+            © 2023 БізБуд. Створено по шаблону <a href="https://manage.wix.com/dashboard/1cc33f76-073e-4822-8c61-b899aaa3109c/home">Wix.com</a>  
         </Wrapper>
     );
 };
-
-export default Footer;

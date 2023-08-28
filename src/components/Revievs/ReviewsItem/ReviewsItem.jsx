@@ -1,37 +1,33 @@
-import React from 'react';
-import styled from 'styled-components';
-const Wrapper = styled.div`
-    width:70%;
-    height: max-content;
-    display: flex;
-    flex-direction: column;
-    justify-content:space-around;
-    gap:20px
-    `
-const Title = styled.div`
-    text-align:center;
-    font-weight: 600;
-    font-size: 55px;
-    margin: 0 auto;
-`
-const Name = styled.div`
-font-weight: 600;
-font-size: 16px;
-margin: 0 auto;
-`
-const CompanyName = styled(Name)`
-font-weight: 400;
-font-size: 16px;
-margin: 0 auto;
-`
-const ReviewsItem = () => {
-    return (
-        <Wrapper>
-           <Title>Web Site is really good , i hope you will ... </Title>
-           <Name>Boris Britva</Name>
-           <CompanyName>WebGroupDEvelopment</CompanyName>
-        </Wrapper>
-    );
-};
+import React, { useEffect } from "react";
+import { useState } from "react";
+import { CompanyName, Name, Title, Wrapper } from "./Styles";
+let arrOfReviewers = [
+  { title: "A", author: "CBoris Britva", company: "Afod" },
+  { title: "B", author: "GWBoris Britva", company: "DepGrop" },
+  { title: "C", author: "BEBoris Ba", company: "100top" },
+  { title: "D", author: "BorisLo Britva", company: "robota" },
+  { title: "E", author: "Bos Bra", company: "coed" },
+  { title: "E", author: "Bos Bra", company: "coed" },
+];
 
-export default ReviewsItem;
+export const ReviewsItem = () => {
+  const [counter, setCounter] = useState(0);
+
+  useEffect(() => {
+    if (counter > 4) {
+      setCounter((percounter) => (percounter = 0));
+    } else {
+      const interval = setInterval(() => {
+        setCounter((prevCounter) => prevCounter + 1);
+      }, 3000);
+      return () => clearInterval(interval);
+    }
+  }, [counter]);
+  return (
+    <Wrapper>
+      <Title>{arrOfReviewers[counter].title}</Title>
+      <Name>{arrOfReviewers[counter].author}</Name>
+      <CompanyName>{arrOfReviewers[counter].company}</CompanyName>
+    </Wrapper>
+  );
+};

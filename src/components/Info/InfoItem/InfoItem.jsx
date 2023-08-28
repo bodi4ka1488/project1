@@ -1,21 +1,9 @@
 import React from 'react';
-import styled from 'styled-components';
-const Wrapper = styled.div`
-    width:fit-content;
-    display:flex;
-    flex-direction:column;
-    color:white;
-    align-items: center;
-`
-const Number = styled.div`
-    height:100px;
-    font-size:80px;
-    font-weight:700;
-
-`
+import { Number, Wrapper } from './Styles';
 
 
-const InfoItem = (props) => {
+
+export const InfoItem = (props) => {
     return (
         <Wrapper>
             <Number>{props.number}</Number>
@@ -23,5 +11,3 @@ const InfoItem = (props) => {
         </Wrapper>
     );
 };
-
-export default InfoItem;

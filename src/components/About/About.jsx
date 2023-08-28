@@ -1,38 +1,9 @@
 import React from 'react';
-import styled from 'styled-components';
-const Wrapper = styled.div`
-    width:100%;
-    height: max-content;
-    display: flex;
-    flex-direction: row;
-    justify-content:space-around;
-`
-const Content = styled.div`
-    width:350px;    
-    flex-direction: column;
-    display: flex;
-    gap:20px
+import { Content, Info, Text, Title, Wrapper } from './Slytes';
 
-`
-const Info = styled.div`
-    color: blue;
-    margin: 70px 0 0 0;
-    text-transform: uppercase;
-    font-weight: 600;
-    font-size: 14px;
-`
-const Title = styled.div`
-    font-weight: 600;
-    font-size: 36px;
-    margin: 0 auto;
-`
-const Text = styled.div`
-font-size:18px;
-line-height:28px;
-`
-const About = () => {
+export const About = () => {
     return (
-        <Wrapper>
+        <Wrapper id='about'>
             <Content>
                 <Info>Про нас </Info>
                 <Title>Наші експерти - найкращі</Title>
@@ -44,5 +15,3 @@ const About = () => {
         </Wrapper>
     );
 };
-
-export default About;

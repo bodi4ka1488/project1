@@ -1,32 +1,17 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
-import styled from 'styled-components';
-import './NavBar.css'
-const Nav = styled.nav`
-    display:flex;
-    flex-direction:row;
+import { Nav, NavItem } from './Styles';
+// eslint-disable-next-line no-unused-vars
+import { Link, animateScroll as scroll } from "react-scroll";
 
-`
-const NavItem = styled.div`
-    font-size:17px
-    transition-timing-function: ease-in-out;
-    transition-duration: 1s;
-    transition-property: color;
-    &:hover{
-        color: #ab11ff;
-    }
-`
-const NavBar = () => {
+export const NavBar = () => {
     return (
         <Nav>
-            <NavLink to ="/"><NavItem>Головна</NavItem></NavLink>
-            <NavLink to ="/"><NavItem>Послуги</NavItem></NavLink>
-            <NavLink to ="/"><NavItem>Про нас</NavItem></NavLink>
-            <NavLink to ="/"><NavItem>Відгуки</NavItem></NavLink>
-            <NavLink to ="/"><NavItem>Клієнти</NavItem></NavLink>
-            <NavLink to ="/"><NavItem>Контакти</NavItem></NavLink>
+            <Link to ="main" spy={true} smooth={true} offset={-70} duration={500}><NavItem>Головна</NavItem></Link>
+            <Link to ="servise" spy={true} smooth={true} offset={-70} duration={500}><NavItem>Послуги</NavItem></Link>
+            <Link to ="about" spy={true} smooth={true} offset={-70} duration={500}><NavItem>Про нас</NavItem></Link>
+            <Link to ="revievs" spy={true} smooth={true} offset={-70} duration={500}><NavItem>Відгуки</NavItem></Link>
+            <Link to ="clients" spy={true} smooth={true} offset={-70} duration={500}><NavItem>Клієнти</NavItem></Link>
+            <Link to ="contact" spy={true} smooth={true} offset={-70} duration={500}><NavItem>Контакти</NavItem></Link>
         </Nav>
     );
 };
-
-export default NavBar;

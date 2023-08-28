@@ -1,34 +1,17 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import styled from 'styled-components';
-import './Header.css'
-import NavBar from './NavBar/NavBar';
-import Buttons from '../Buttons/appButons';
-const Head = styled.header`
-  width: 100%;
-  height: 60px;
-  background-color: #f9fafe;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  position:fixed;
-  z-index:1;
-  `
-  const Logo = styled.div`
-  font-weight: 600;
-  font-size:26px;
-  padding-left:30px;
-  color:black;
+import React from "react";
+import { Link } from "react-router-dom";
+import { CustomButton } from "../CustomButton/CustomButton";
+import { Head, Logo } from "./Styles";
+import { NavBar } from "./NavBar/NavBar";
 
-`
-const Header = () => {
-    return (
-      <Head>
-        <Link to ="/"><Logo>БізБуд</Logo></Link>
-        <NavBar/>
-        <Buttons>Зв'язатися</Buttons>
-      </Head>
-    );
+export const Header = () => {
+  return (
+    <Head>
+      <Link to="/">
+        <Logo>БізБуд</Logo>
+      </Link>
+      <NavBar />
+      <CustomButton isbool={true} title={`Зв'язатися`} />
+    </Head>
+  );
 };
-
-export default Header;
